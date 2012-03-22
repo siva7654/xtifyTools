@@ -1,0 +1,33 @@
+========================
+Tag API 2.0 Perl Script
+
+Script: tagAPI.pl
+About: Below is a perl script that will associate a tag with your user by Xid using our Tag API 2.0.
+Author: Michael Bordash michael@xtify.com
+Website: http://developer.xtify.com
+
+
+Prerequisites
+In order to use this script, there are some prerequisites:
+
+1. Know the XID, appKey and Tag for the user you want to add a tag
+2. Ensure perl is installed
+        If you're on windows, you can install here: http://www.activestate.com/Products/ActivePerl/
+        If you're on *nix, you probably have it installed already (see perl.org if not)
+3. Ensure LWP bundle is installed
+        If you're on an RPM based system you can likely install by entering:
+        yum install perl-libwww-perl
+        follow all dependencies
+4. Optionally install SSL support for perl
+        Crypt-SSLeay: http://search.cpan.org/~nanis/Crypt-SSLeay-0.58/SSLeay.pm
+
+Edit and execute the script
+
+1. Edit tagAPI.pl and replace REPLACE_WITH_XID, REPLACE_WITH_TAG, REPLACE_WITH_APPKEY with your values.
+2. Run the script in your command line.
+3. You can check that it worked by browsing to:
+        http://api.xtify.com/2.0/tags/REPLACE_WITH_XID/tags?appKey=REPLACE_WITH_APPKEY
+
+For a complete review of our Tag API settings visit:
+        http://developer.xtify.com/display/APIs/Tag+API+2.0+%28Latest%29
+

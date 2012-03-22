@@ -1,0 +1,38 @@
+Push API v2.x Perl Script
+
+Script: apiPush.pl
+About: Use this script to interact with Xtify's Push API end point v2.x
+Author: Michael Bordash michael@xtify.com
+Website: http://developer.xtify.com
+
+Prerequisites
+In order to use this script, there are some prerequisites:
+
+1. Obtain an API Key from the Xtify Console: http://console.xtify.com
+2. Know the XIDs or Tags for users that will receive your push notification (or you can send to all)
+3. Ensure perl is installed 
+	If you're on windows, you can install here: http://www.activestate.com/Products/ActivePerl/
+	If you're on *nix, you probably have it installed already (see perl.org if not)
+4. Ensure LWP bundle is installed
+	If you're on an RPM based system you can likely install by entering:
+	yum install perl-libwww-perl
+	follow all dependencies
+5. Optionally install SSL support for perl
+	Crypt-SSLeay: http://search.cpan.org/~nanis/Crypt-SSLeay-0.58/SSLeay.pm
+
+Create a json config and execute the script 
+
+1. Create a JSON-formatted local push config file. An example is included in this directory.
+2. Make your script executable like this on 'nix:
+	chmod +x pushAPI.pl
+3. Call your script like this:
+	./pushAPI.pl pushconfigfile.json
+
+
+For a complete review of our Push API settings visit:
+	http://developer.xtify.com/display/APIs/Push+API+2.0
+
+
+
+
+

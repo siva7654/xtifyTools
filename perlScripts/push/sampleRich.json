@@ -1,0 +1,46 @@
+{
+    "apiKey": "apikey123",
+    "appKey": "appKey456",
+    "xids": [
+        "xid1",
+        "xid2",
+        "xid3"
+    ],
+    "hasTags": [
+        "apple",
+        "banana",
+        "orange"
+    ],
+    "notTags": [
+        "spruce",
+        "maple",
+        "fir"
+    ],
+    "sendAll": true,
+    "content": {
+        "subject": "Greetings Earthlings",
+        "message": "Take me to your leader",
+        "action": {
+            "type": "URL|RICH|CUSTOM|DEFAULT|NONE",
+            "data": "url|intent|...",
+            "label": "label"
+        },
+        "rich": {
+            "subject": "Exclusive Offers for You",
+            "message": "Buy more things!",
+            "action": {
+                "type": "URL|PHONE|CUSTOM|DEFAULT|NONE",
+                "data": "url|intent|...",
+                "label": "label"
+            }
+        },
+        "payload": {
+            "key1": "value1",
+            "key2": "value2"
+        },
+        "sound": "default.caf",
+        "badge": "+1",
+        "actionCategories": "android-category",
+        "groupId": "android-group"
+    }
+}
