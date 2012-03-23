@@ -19,9 +19,6 @@ my $apiRequest = do {
         or die "could not open $file: $!";
     <$fh>;
 };
-$ENV{HTTPS_DEBUG} = 1;
-$ENV{HTTPS_CERT_FILE} = '/Users/michael/Documents/workspace/Xtify_Webservices/2.0/discover.client.xtify.crt';
-$ENV{HTTPS_KEY_FILE}  = '/Users/michael/Documents/workspace/Xtify_Webservices/2.0/discover.client.xtify.key';
 
 my $apiHeader = HTTP::Headers->new;
 $apiHeader->push_header('Content-Type' => 'application/json');
