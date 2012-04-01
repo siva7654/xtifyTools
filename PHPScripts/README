@@ -1,0 +1,35 @@
+Simple Xtify 2.x PHP Push Notification script
+
+Anders Retterås (@AndersRetteras)
+March 2012
+
+This folder contains a PHP Class and script to send a simple push notification through the Xtify 2.x Push API.
+
+The script can be utilized this way:
+
+1) Replace "ADD_YOUR_APIKEY_HERE" with your API key
+2) Replace "ADD_YOUR_APPKEY_HERE" with your APP key
+3) Include the PHP file in your PHP environment
+4) Instanciate the class with a Subject, Message and an array of XIDs:
+
+	$title = "My subject";
+	$message = "My message";
+	$recipients = array();
+	array_push($recipients, "YOUR_FIRST_XID";
+
+	$msg = new pushNotification($title,$message,$recipients);
+	$msg->sendMessage();
+
+If you want to check out the JSON string before you submit it to the Xtify API, use the getAsJSON() function:
+	print_r($msg->getAsJSON());
+	
+About the script
+The script instanciates a PHP class matching the Xtify 2.x API (http://developer.xtify.com/display/APIs/Push+API+2.0).
+The sendMessage() method JSON-serializes this class (getAsJSON()) and uses CURL to post the JSON string to the Xtify 2.x API.
+The script requires PHP version >= 5.2
+
+The current version of this script is set to use action->type=DEFAULT and no rich content but you can allways set more advanced options after the class is instantiated by referencing properties the PHP object or by changing the default settings of the properties.
+
+
+
+
