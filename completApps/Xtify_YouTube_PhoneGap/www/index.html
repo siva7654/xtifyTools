@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title></title>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+	<meta charset="utf-8">
+
+	<script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script>
+
+    <link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.mobile-1.1.0.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+
+    <div id="fldFeed" data-role="page">
+
+        <div data-role="header">
+            <h1>Fast Lane Daily</h1>
+            <a href="index.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+        </div>
+
+        <div id="fldFeedMain" data-role="content">  
+            <ul id="fldFeedItems" data-role="listview"></ul>
+        
+            <p><a id="fldItem" href="#fldItem" style="display:none;"></a></p>
+        
+        </div>
+
+        <div data-role="footer">
+            <h4></h4>
+        </div>
+    </div>
+
+    <div id="fldItem" data-role="page">
+
+        <div data-role="header">
+            <h1>Fast Lane Daily</h1>
+            <a href="index.html" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+        </div>
+
+        <div data-role="content">  
+    
+            <p id="fldItemTitle"></p>
+    
+            <p id="fldItemContent"></p>
+    
+            <p id="fldItemDesc"></p>
+        </div>    
+
+    </div>
+
+  </body>
+</html>
