@@ -20,7 +20,7 @@
 // Set to YES to let Xtify receive location updates from the user. The user will also receive a prompt asking for permission to do so.
 // Set to NO to completely turn off location updates. No prompt will appear. Suitable for simple/rich notification push only
 
-#define xLocationRequired YES 
+#define xLocationRequired NO 
 
 // Background location update
 //
