@@ -13,21 +13,22 @@
 // Enter the AppKey assigned to your app at http://console.xtify.com
 // Nothing works without this.
 
-#define xAppKey @"ENTER YOUR APP KEY HERE"
+#define xAppKey @"46f94295-c55a-4de6-9906-efec5fd283dd"
 
+//
 // Location updates
 //
 // Set to YES to let Xtify receive location updates from the user. The user will also receive a prompt asking for permission to do so.
 // Set to NO to completely turn off location updates. No prompt will appear. Suitable for simple/rich notification push only
 
-#define xLocationRequired NO 
+#define xLocationRequired NO
 
 // Background location update
 //
 // Set this to TRUE if you want to also send location updates on significant change to Xtify while the app is in the background. 
 // Set this to FALSE if you want to send location updates on significant change to Xtify while the app is in the foreground only.
 
-#define xRunAlsoInBackground TRUE 
+#define xRunAlsoInBackground FALSE 
 
 // Badge management
 // 
@@ -36,6 +37,11 @@
 // We've included an example on how to set/update the badge in the main delegate file within our sample apps
 
 #define xBadgeManagerMethod XLInboxManagedMethod 
+
+// Logging Flag 
+//
+// To turn on logging change xLogging to true
+#define xLogging TRUE
 
 // This is a premium feature that supports a regional control of messaging by multiple user governed by one primary organization account. Suitable for organizations that have multiple geographical regions or franchise business models. This feature will only work with Enterprise accounts. Please inquire with Xtify to enable this feature.
 
