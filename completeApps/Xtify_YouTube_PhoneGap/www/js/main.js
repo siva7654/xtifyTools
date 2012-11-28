@@ -2,6 +2,7 @@ $(document).bind("mobileinit", function(){
   $.mobile.defaultPageTransition = 'slide';
 });
 
+
 function loadLatest() {
     var URL = "http://gdata.youtube.com/feeds/api/users/fastlanedaily/uploads?v=2&alt=jsonc&max-results=25";
     $.ajax({
@@ -93,7 +94,8 @@ function loadItem(itemObj) {
             //var count = this.viewCount; 
                 
             var title = data.data.title;
-            var description = data.data.description;
+            var description = replaceURLWithHTMLLinks(data.data.description);
+            description = description.replace(/\n/g, '<br />');
             var videoUrl = getAttributeByIndex(data.data.content, 0); 
             var embedCode = '<iframe src="http://www.youtube.com/embed/' + videoId + '" class="youtube-player" type="text/html" width="290" height="160"  frameborder="0"></iframe>';
             $('#fldItem #fldItemTitle').html(title);
@@ -115,4 +117,9 @@ function getAttributeByIndex(obj, index){
     i++;
   }
   return null;
+}
+
+function replaceURLWithHTMLLinks(text) {
+    var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(exp,"<a href='$1'>$1</a>"); 
 }
