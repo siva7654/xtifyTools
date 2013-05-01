@@ -1,6 +1,4 @@
-# Black Hole API Servers
-
-## About Black Hole Servers
+## Black Hole API Servers
 
 A black hole server is a process which simulates a production server without
 actually executing any of the tasks that the real server might. This can be
